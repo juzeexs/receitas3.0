@@ -1,0 +1,231 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #5a4400;
+  min-height: 100vh;
+  position: relative;
+  background: linear-gradient(45deg, #f5efc0, #f5f4e8);
+}
+
+.background-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://example.com/food-background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: moveBackground 30s linear infinite;
+  z-index: -1;
+}
+
+
+@keyframes gradientAnimation {
+  0% {
+  background-position: 0% 50%;
+}
+  50% {
+  background-position: 100% 50%;
+}
+  100% {
+  background-position: 0% 50%;
+}
+
+}
+
+header {
+  text-align: center;
+  margin-bottom: 3rem;
+  background: linear-gradient(270deg, #6e2800, #ffeb3b, #ec6cc2);
+  background-size: 600% 600%;
+  animation: gradientAnimation 11s ease infinite;
+  padding: 30px 20px;
+  box-shadow: 0 0 15px 5px #b59f0077;
+  user-select: none;
+}
+
+
+header h1 {
+  font-weight: 900;
+  font-size: 3.2rem;
+  letter-spacing: 4px;
+  color: #ffffff;
+}
+
+header p {
+  font-style: italic;
+  font-weight: 600;
+  color: #c4c4c4;
+  font-size: 1.3rem;
+  letter-spacing: 1.2px;
+  position: relative;
+  padding-bottom: 10px;
+  margin-bottom: 0;
+}
+
+header p::after {
+  content: '';
+  width: 100px;
+  height: 3px;
+  background: #fffacd;
+  display: block;
+  margin: 6px auto 0;
+  box-shadow: 0 0 8px #fffacd;
+}
+
+.form-control {
+  background-color: #fff9d6;
+  border-color: #b59f00;
+  color: #5a4400;
+}
+
+.form-control::placeholder {
+  color: #928334;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 8px 0 rgba(181, 159, 0, 0.7);
+  border-color: #b59f00;
+}
+
+.btn-search {
+  background: linear-gradient(45deg, #2a6425, #73df67);
+  border: none;
+  font-weight: 700;
+  color: white;
+  transition: all 0.5s ease;
+  background-size: 200% 100%; 
+  background-position: left bottom; 
+}
+
+.btn-search:hover {
+  background-position: right top; 
+  color: white;
+}
+
+.card {
+  border: none;
+  border-radius: 15px;
+  background: linear-gradient(45deg, #f8efc0, #ffffff);
+  box-shadow: 0 4px 12px rgba(181, 159, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+.card-img-top {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-title {
+  color: #5a4400;
+  font-weight: 700;
+}
+
+.btn-outline-info {
+  --bs-btn-color: #b59f00;
+  --bs-btn-border-color: #b59f00;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #b59f00;
+  --bs-btn-hover-border-color: #b59f00;
+}
+
+.btn-close-pink {
+  background-color: transparent;
+  opacity: 0.7;
+  filter: invert(1) grayscale(1) brightness(0.5) sepia(1) hue-rotate(-50deg) saturate(100);
+}
+    
+.btn-close-pink:hover {
+  opacity: 1;
+}
+
+.modal-backdrop.show {
+  background-color: #fff9d6 !important;
+}
+
+.modal-content {
+  border-radius: 20px;
+  background: #fff9d6;
+  box-shadow: 0 14px 40px rgba(181, 159, 0, 0.4);
+  color: #5a4400;
+}
+
+.modal-header {
+  border-bottom: none;
+}
+
+.modal-title {
+  color: #5a4400;
+  font-weight: 700;
+}
+
+.modal-body img {
+  border-radius: 15px;
+  width: 100%;
+  margin-bottom: 20px;
+  box-shadow: 0 6px 15px rgba(181, 159, 0, 0.3);
+}
+
+.ingredients-list {
+  list-style: inside disc;
+  color: #7f6c00;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.instructions {
+  white-space: pre-wrap;
+  color: #6e5a00;
+  line-height: 1.6;
+}
+    
+.carousel-item {
+  padding: 0 50px;
+}
+    
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #b59f00;
+  border-radius: 50%;
+}
+
+.recipes-carousel .row {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: hidden;
+}
+
+.recipes-carousel .col-lg-3 {
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+    
+footer {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 10px 0;
+  background-color: #b59f00cc;
+  color: #ffffff;
+}
+
+footer a {
+  color: #ffffff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
